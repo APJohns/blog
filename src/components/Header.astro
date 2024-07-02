@@ -1,0 +1,50 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+    <a href="/" class="logo">
+      <img width="60" src="/logo.png" alt="home" />
+    </a>
+		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+	</nav>
+</header>
+
+<style>
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+
+	nav {
+    display: flex;
+		align-items: center;
+		justify-content: space-between;
+    margin: auto;
+    padding: 2rem 0;
+    width: var(--app-width);
+	}
+
+  .internal-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+	nav a {
+		color: var(--black);
+		text-decoration: none;
+	}
+
+	nav a.active {
+		text-decoration: underline;
+	}
+</style>
