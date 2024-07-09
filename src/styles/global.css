@@ -18,6 +18,7 @@
   --app-width: 90%;
   --surface: #f4f4f4;
   --surface-inverse: black;
+  --body-subtle: #6a6a6a;
 }
 @font-face {
 	font-family: 'Atkinson';
