@@ -4,9 +4,9 @@
 import '../styles/global.css';
 
 interface Props {
-	title: string;
-	description: string;
-	image?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -21,7 +21,12 @@ const { title, description, image = '/social.png' } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href="/fonts/NotoSerif-VariableFont_wdth,wght" as="font" type="font/ttf" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fira+Code:wght@300..700&display=swap"
+  rel="stylesheet"
+/>
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
