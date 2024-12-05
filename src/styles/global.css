@@ -138,6 +138,10 @@ hr {
   white-space: nowrap;
 }
 
+.carbonbadge#wcb.wcb-d #wcb_2 {
+  color: rgb(var(--gray-dark));
+}
+
 @media (min-width: 800px) {
   :root {
     --app-width: 75vw;
