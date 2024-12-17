@@ -81,7 +81,7 @@ try {
 
 #### Run synchronously
 
-If we need to visit multiple pages, we can't spin up multiple browser, Puppeteer doesn't allow it. So we can either launch a bunch of tabs or run our tasks synchronously. I went with the latter. This approach takes longer, but the memory will only get as high as the largest site visited. Whereas with multiple tabs your memory usage will get quite high. Since my task was happening in the background, I didn't mind the increased runtime for the sake of reduced memory costs.
+If we need to visit multiple pages, we can either launch a bunch of browser or tabs, or run our tasks synchronously. I went with the latter. This approach takes longer, but the memory will only get as high as the largest site visited. Whereas with multiple tabs your memory usage will get quite high. Since my task was happening in the background, I didn't mind the increased runtime for the sake of reduced memory costs.
 
 ### Side note
 
