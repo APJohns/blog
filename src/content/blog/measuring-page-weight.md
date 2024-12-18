@@ -73,3 +73,5 @@ export default async function getTransferSize(url: string) {
 ```
 
 You can learn more about how I set up Puppeteer in my blog post, [Wrangling Puppeteer's memory usage on the server](https://www.ashjohns.dev/blog/headless-puppeteer/).
+
+Through this task, I've learned that page weight is not an exact science. There are so many variables that create variance in the actual value. A lot of those variables come from the user, meaning there is no one true value for the weight of a page. For the sake of my project's needs, this solution gets me close enough to what an average user might see that I feel confident in moving forward with it.
