@@ -65,7 +65,7 @@
   .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem 1rem;
     padding: 0;
     list-style: none;
   }
@@ -80,6 +80,7 @@
   .tag-list {
     margin-top: 4rem;
     border: 0;
+    padding-top: 0.5rem;
   }
 
   .tag-checkbox:checked + .tag {
