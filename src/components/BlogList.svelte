@@ -88,6 +88,14 @@
     background: var(--accent);
   }
 
+  .tag-checkbox:focus-visible + .tag {
+    outline: 2px solid var(--accent);
+  }
+
+  .tag-checkbox:checked:focus-visible + .tag {
+    outline-offset: 1px;
+  }
+
   .post-list {
     display: grid;
     grid-template-columns: 1fr;
