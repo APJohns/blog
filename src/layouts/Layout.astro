@@ -1,6 +1,7 @@
 ---
 import social from '@/images/social.png';
 import '../styles/global.css';
+import Footer from '@/components/Footer.astro';
 
 interface Props {
   title: string;
@@ -57,5 +58,6 @@ const { title, description, image = '/social.png' } = Astro.props;
   </head>
   <body>
     <slot />
+    <Footer />
   </body>
 </html>

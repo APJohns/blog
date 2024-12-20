@@ -19,7 +19,6 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
 
     <BlogList posts={posts} client:load />
   </main>
-  <Footer />
 </Layout>
 
 <style>
