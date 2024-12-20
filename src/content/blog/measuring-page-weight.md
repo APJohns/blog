@@ -2,6 +2,7 @@
 title: 'Measuring page weight'
 description: 'How to accurately determine the sizes of files needed to render a web page.'
 pubDate: 'Dec 17 2024'
+tags: ['Sustainability', 'Wicked Green Web', 'Backend']
 ---
 
 I’m working on a web sustainability project called [Wicked Green Web](https://www.wickedgreenweb.dev/) that measures the estimated emissions of a page. The primary metric used in this calculation is page weight. <dfn>Page weight</dfn> is the size, as transferred over the network, of the files needed to render a web page. You can then use a model to estimate grams of CO<sub>2</sub> emitted per page visit. You can learn more on my [how it works](https://www.wickedgreenweb.dev/how-it-works) page. However, getting the file size of a web page turned out to be a lot more challenging than expected.

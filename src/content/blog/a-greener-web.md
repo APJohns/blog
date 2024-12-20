@@ -2,6 +2,7 @@
 title: 'A Greener Web: Building a Dashboard with React and Netlify'
 description: 'The first step to a greener web. Follow along as I build out a web sustainability dashboard using React and Netlify.'
 pubDate: 'Jul 1 2024'
+tags: ['Sustainability']
 ---
 
 When we think of sustainability efforts, we picture electric cars, recycling, and reusable water bottles. But we often don’t think of the impact our digital presence has. In fact, the internet accounts for around 4% of global carbon emissions. Thats about the same as the entire aviation industry!
@@ -9,12 +10,15 @@ When we think of sustainability efforts, we picture electric cars, recycling, an
 There are lots of ways to reduce the impact of our websites. I’ve linked to some great articles that dive into details at the bottom of this post. But a key part of going on this web sustainability journey is understanding where we are now, so we can see how far we’ve come. I’m talking metrics! Theres nothing we developers like more than optimizing our code to get that higher score. Even making small improvements can compound across all your users. So lets gamify this and make our little corner of the web a better place.
 
 ## Context
+
 During my time on Boston Scientific’s Design System team, we took on this challenge. We wanted to be aware of the impact our projects had towards web sustainability. So we began by taking a look at our documentation site. The site is built with React, and hosted on Netlify.
 
 ### Prerequisites Knowledge
+
 This article is written with some understanding of React and Netlify assumed.
 
 ## The Plan
+
 This all began when we came across [Website Carbon Calculator](https://www.websitecarbon.com). They have a badge you can add to your website to show the estimated grams of CO<sub>2</sub> used per visit. We used this for a while but want to take it a step further to see how those numbers changed over time as our site grew, and to include it as one of our metrics. So we set out to create a dashboard showing just that.
 
 1. Collect the emissions data of each of our pages using an API and Netlify Functions
@@ -22,6 +26,7 @@ This all began when we came across [Website Carbon Calculator](https://www.websi
 3. Summarize findings in a dashboard.
 
 ## Collect the Data
+
 Website Carbon Calculator offers an API where you can pass it a URL, and get back emissions data. We needed to pass each of our pages to this API, and save the results. This comes with a few problems to solve for a JAMStack site. How do we get all the URLs we need, where do we make those API calls, and where do we store that data? The solutions are sitemap, Netlify Functions, and MongoDB respectively.
 
 Before we start writing any code, we should setup a [MongoDB Atlas](https://www.mongodb.com/atlas) database. Their Getting Started with Atlas documentation will set you up withe everything you will need.
@@ -63,7 +68,7 @@ async function getCarbon(url: string, date: string): Promise<CarbonEntry> {
       date,
       url,
       carbon: res.data.c,
-      percent: res.data.p
+      percent: res.data.p,
     };
   } catch (error) {
     console.error(error);
@@ -74,8 +79,8 @@ async function getCarbon(url: string, date: string): Promise<CarbonEntry> {
       percent: -1,
       error: {
         status: error.response.status,
-        statusText: error.response.statusText
-      }
+        statusText: error.response.statusText,
+      },
     };
   }
 }
@@ -130,17 +135,17 @@ const handler: Handler = async () => {
       const insertResult = await carbon.insertMany(carbonData);
       console.log(`Inserted ${insertResult.insertedCount} records into DB`);
       return {
-        statusCode: 200
+        statusCode: 200,
       };
     } else {
       return {
-        statusCode: 500
+        statusCode: 500,
       };
     }
   } catch (error) {
     console.error(error);
     return {
-      statusCode: 500
+      statusCode: 500,
     };
   } finally {
     await client.close();
@@ -175,7 +180,7 @@ async function getCarbon(url: string, date: string): Promise<CarbonEntry> {
       date,
       url,
       carbon: res.data.c,
-      percent: res.data.p
+      percent: res.data.p,
     };
   } catch (error) {
     console.error(error);
@@ -186,8 +191,8 @@ async function getCarbon(url: string, date: string): Promise<CarbonEntry> {
       percent: -1,
       error: {
         status: error.response.status,
-        statusText: error.response.statusText
-      }
+        statusText: error.response.statusText,
+      },
     };
   }
 }
@@ -244,17 +249,17 @@ const handler: Handler = async () => {
       const insertResult = await carbon.insertMany(carbonData);
       console.log(`Inserted ${insertResult.insertedCount} records into DB`);
       return {
-        statusCode: 200
+        statusCode: 200,
       };
     } else {
       return {
-        statusCode: 500
+        statusCode: 500,
       };
     }
   } catch (error) {
     console.error(error);
     return {
-      statusCode: 500
+      statusCode: 500,
     };
   } finally {
     await client.close();
@@ -297,6 +302,7 @@ We also need to add jsdom as an external dependency here. If you’re unfamiliar
 We can run and test these functions locally using the Netlify CLI. Since we won’t have much data to work with yet, you might want to run it a few times manually.
 
 ## Show the Data
+
 Now that we have some data, we need to be able to show it in some meaningful way. We’ll first write a couple more Netlify Functions that query our data from MongoDB.
 
 One to get all the records.
@@ -377,11 +383,13 @@ We can use these to build out a dashboard. Here are some examples of what we did
 Unfortunately I can't link out to the dashboard or its code. I plan to rebuild this dashboard for another project of mine, so stay tuned for a more in-depth post with details on the dashboard and taking advantage of some new features offered by the Website Carbon API.
 
 ## Conclusion
+
 Web sustainability is important in today's day and age. Adding it to the metrics we track is the first step to a greener web. And it doesn't hurt that the same changes that make our sites greener, also happen to improve performance!
 
 Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/ashley-p-johns) or [Threads](https://www.threads.net/@ashpjohns) if you have any questions, or any other green tips!
 
 ## Helpful Resources
+
 - https://www.websitecarbon.com
 - https://www.mongodb.com/atlas
 - https://docs.netlify.com/functions/get-started/?fn-language=ts
@@ -389,4 +397,5 @@ Feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/ashley-p-
 - https://developer.mozilla.org/en-US/blog/introduction-to-web-sustainability
 
 ## Sources
+
 - https://sustainablewebdesign.org/estimating-digital-emissions

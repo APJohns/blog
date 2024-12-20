@@ -2,6 +2,7 @@
 title: "Wrangling Puppeteer's memory usage on the server"
 description: 'My fight to reduce memory usage when running Puppeteer server-side.'
 pubDate: 'Dec 9 2024'
+tags: ['Wicked Green Web', 'Backend']
 ---
 
 I’m working on a web sustainability dashboard to measure the carbon footprint of my web applications. The primary metric used is file transfer sizes. The best way to accurately get this value is to load the page in Puppeteer. But when you’re trying to run this affordably on a server with 512MB of RAM, every byte of memory usage counts. So how do we run Chrome on the server while using as little memory as possible?
