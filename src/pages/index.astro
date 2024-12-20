@@ -21,7 +21,7 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
       {
         posts.map((post) => (
           <li class="post-item">
-            <a href={`/blog/${post.slug}/`} class="post-link">
+            <a href={`/blog/${post.id}/`} class="post-link">
               {/* {post.data.heroImage && <img width={720} height={360} src={post.data.heroImage} alt="" class="hero-image" />} */}
               <div class="details">
                 <p class="date">
