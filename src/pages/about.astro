@@ -3,6 +3,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '@/layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+import me from '@/images/me.png';
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -13,7 +15,7 @@ import Layout from '@/layouts/Layout.astro';
         <h1>Hi!</h1>
         <p>I'm Ash.</p>
       </div>
-      <img src="/me.png" alt="A picture of me by a river and some boats." class="profile-image" />
+      <Image src={me} alt="A picture of me by a river and some boats." loading="eager" class="profile-image" />
     </div>
     <p>
       I'm a UX Frontend Developer based in Massachusetts. I started this blog to create a space to share details about
