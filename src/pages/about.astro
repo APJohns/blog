@@ -1,32 +1,28 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import FormattedDate from '../components/FormattedDate.astro';
+import Layout from '@/layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-      <div class="profile">
-        <div class="profile-text">
-          <h1>Hi!</h1>
-          <p>I'm Ash.</p>
-        </div>
-        <img src="/me.png" alt="A picture of me by a river and some boats." class="profile-image"/>
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <Header />
+  <main>
+    <div class="profile">
+      <div class="profile-text">
+        <h1>Hi!</h1>
+        <p>I'm Ash.</p>
       </div>
-      <p>I'm a UX Frontend Developer based in Massachusetts. I started this blog to create a space to share details about cool projects I've been working on, and any tips and tricks I learn along the way.</p>
-      <p>Check out my <a href="https://ashpjohns.com">portfolio</a> for more info on my professional background.</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+      <img src="/me.png" alt="A picture of me by a river and some boats." class="profile-image" />
+    </div>
+    <p>
+      I'm a UX Frontend Developer based in Massachusetts. I started this blog to create a space to share details about
+      cool projects I've been working on, and any tips and tricks I learn along the way.
+    </p>
+    <p>Check out my <a href="https://ashpjohns.com">portfolio</a> for more info on my professional background.</p>
+  </main>
+  <Footer />
+</Layout>
 
 <style>
   .profile {
@@ -62,8 +58,8 @@ import FormattedDate from '../components/FormattedDate.astro';
     }
 
     .profile-image {
-    width: 33%;
-    min-width: 200px;
-  }
+      width: 33%;
+      min-width: 200px;
+    }
   }
 </style>
