@@ -1,7 +1,7 @@
 ---
 title: "Wrangling Puppeteer's memory usage on the server"
 description: 'My fight to reduce memory usage when running Puppeteer server-side.'
-pubDate: 'Dec 9 2024'
+pubDate: 'Dec 9 2024 EDT'
 tags: ['Wicked Green Web', 'Backend']
 ---
 

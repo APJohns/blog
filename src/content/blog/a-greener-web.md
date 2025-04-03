@@ -1,7 +1,7 @@
 ---
 title: 'A Greener Web: Building a Dashboard with React and Netlify'
 description: 'The first step to a greener web. Follow along as I build out a web sustainability dashboard using React and Netlify.'
-pubDate: 'Jul 1 2024'
+pubDate: 'Jul 1 2024 EST'
 tags: ['Sustainability']
 ---
 

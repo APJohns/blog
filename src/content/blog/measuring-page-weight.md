@@ -1,7 +1,7 @@
 ---
 title: 'Measuring page weight'
 description: 'How to accurately determine the sizes of files needed to render a web page.'
-pubDate: 'Dec 17 2024'
+pubDate: 'Dec 17 2024 EDT'
 tags: ['Sustainability', 'Wicked Green Web', 'Backend']
 ---
 
