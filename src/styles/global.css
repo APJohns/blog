@@ -49,7 +49,7 @@ body {
   line-height: 1.5;
 }
 main {
-  width: var(--app-width);
+  max-width: var(--app-width);
   box-sizing: border-box;
   margin: auto;
   background: var(--surface);
