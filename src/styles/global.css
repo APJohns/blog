@@ -19,6 +19,15 @@
   --surface-inverse: black;
   --body-subtle: #6a6a6a;
   --accent: #ff932f;
+  --accent-secondary: #004491;
+
+  --fs-subtle: 1rem;
+  --fs-body: 1.125rem;
+  --fs-emphasis: 1.25rem;
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   --font-body: 'Figtree', sans-serif;
 }

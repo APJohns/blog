@@ -2,6 +2,7 @@
 import social from '@/images/social.png';
 import '../styles/global.css';
 import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
 
 interface Props {
   title: string;
@@ -57,7 +58,24 @@ const { title, description, image = '/social.png' } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
-    <slot />
-    <Footer />
+    <div class="app-layout">
+      <Header />
+      <div class="content">
+        <slot />
+      </div>
+    </div>
   </body>
 </html>
+
+<style>
+  .app-layout {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+  }
+
+  .content {
+    overflow-y: auto;
+    height: 100dvh;
+  }
+</style>
