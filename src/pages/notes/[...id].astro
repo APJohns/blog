@@ -18,7 +18,7 @@ const { Content } = await render(note);
 <Notes title={note.data.name} description={note.data.name} isNotePage>
   <article>
     <div class="toolbar">
-      <div class="filename">{note.data.name}.md</div>
+      <div class="filename">{note.id}.md</div>
       <a href={`https://github.com/APJohns/blog/blob/main/src/content/notes/${note.id}.md`} class="edit-link"
         ><svg
           xmlns="http://www.w3.org/2000/svg"

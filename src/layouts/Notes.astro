@@ -56,6 +56,14 @@ const { isNotePage = false } = Astro.props;
 
   .note-item {
     padding: 0.5rem 0;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
   }
 
   .note-item:not(:last-of-type) {

@@ -1,7 +1,7 @@
 ---
 name: 'Contributing'
-pubDate: 'May 5 2025 EST'
-updateDate: 'May 5 2025 EST'
+pubDate: 'May 29 2025 EST'
+updateDate: 'May 29 2025 EST'
 ---
 
 # Contributing
