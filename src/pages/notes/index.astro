@@ -1,0 +1,20 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import NoteLink from '@/components/NoteLink.astro';
+import Notes from '@/layouts/Notes.astro';
+
+const notes = await getCollection('notes');
+---
+
+<Notes title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <div class="hero">
+    <h1>Notes</h1>
+    <p class="subtitle">
+      Helpful resources and references I've collected along the way. Let's collab! Check out the <a
+        href="/notes/contributing">contributing</a
+      > note to see how.
+    </p>
+  </div>
+</Notes>

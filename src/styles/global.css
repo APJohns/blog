@@ -19,6 +19,17 @@
   --surface-inverse: black;
   --body-subtle: #6a6a6a;
   --accent: #ff932f;
+  --accent-secondary: #004491;
+
+  --border-color-primary: #ddd;
+
+  --fs-subtle: 1rem;
+  --fs-body: 1.125rem;
+  --fs-emphasis: 1.25rem;
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   --font-body: 'Figtree', sans-serif;
 }
@@ -40,9 +51,9 @@ body {
   line-height: 1.5;
 }
 main {
-  width: var(--app-width);
+  max-width: var(--app-width);
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto;
   background: var(--surface);
 }
 h1,

@@ -6,10 +6,12 @@ import svelte from '@astrojs/svelte';
 
 import { remarkReadingTime } from './plugins/remark-reading-time.mjs';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.ashjohns.dev',
-  integrations: [mdx(), sitemap(), svelte()],
+  integrations: [mdx(), sitemap(), svelte(), react()],
   output: 'static',
   adapter: vercel({
     webAnalytics: { enabled: true },

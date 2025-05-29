@@ -1,20 +1,17 @@
 ---
-import Header from '../components/Header.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_DESCRIPTION } from '../consts';
 import Layout from '@/layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
 import me from '@/images/me.png';
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <Header />
+<Layout title="About me | Ash Johns" description={SITE_DESCRIPTION}>
   <main>
     <div class="profile">
-      <div class="profile-text">
-        <h1>Hi!</h1>
-        <p>I'm Ash.</p>
-      </div>
       <Image src={me} alt="A picture of me by a river and some boats." loading="eager" class="profile-image" />
+      <div class="profile-text">
+        <h1>Hi! I'm Ash</h1>
+      </div>
     </div>
     <p>
       I'm a UX Frontend Developer based in Massachusetts. I started this blog to create a space to share details about
@@ -27,9 +24,9 @@ import me from '@/images/me.png';
 <style>
   .profile {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: start;
-    gap: 4rem;
+    gap: 1rem;
     margin: 1rem 0 2rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 2rem;
@@ -53,7 +50,6 @@ import me from '@/images/me.png';
 
   @media (min-width: 400px) {
     .profile {
-      flex-direction: row;
       align-items: center;
     }
 
