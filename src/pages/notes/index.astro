@@ -1,11 +1,6 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
-import { getCollection } from 'astro:content';
-import Layout from '@/layouts/Layout.astro';
-import NoteLink from '@/components/NoteLink.astro';
 import Notes from '@/layouts/Notes.astro';
-
-const notes = await getCollection('notes');
 ---
 
 <Notes title={SITE_TITLE} description={SITE_DESCRIPTION}>
