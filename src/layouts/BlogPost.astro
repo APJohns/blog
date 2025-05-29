@@ -7,7 +7,7 @@ type Props = {
   readTime: string;
 } & CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updateDate, heroImage, readTime } = Astro.props;
+const { title, description, pubDate, updateDate, readTime } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
