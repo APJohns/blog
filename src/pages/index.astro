@@ -14,8 +14,12 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
       <h1>Hi! I'm Ash Johns ✌️</h1>
       <p class="subtitle">Welcome to my corner of the internet.</p>
     </div>
-
-    <BlogList posts={posts} client:load />
+    <h2>Work</h2>
+    <p>
+      Open to work! I'm a frontend developer specializing in design systems. I'm looking for either a design system role
+      or to branch out into more feature development. Don't hesitate ot reach out if you think I'd be a great addition
+      to your team!
+    </p>
   </main>
 </Layout>
 
