@@ -1,12 +1,11 @@
 ---
-import Header from '../components/Header.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_DESCRIPTION } from '../consts';
 import Layout from '@/layouts/Layout.astro';
 import Image from 'astro/components/Image.astro';
 import me from '@/images/me.png';
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<Layout title="About me | Ash Johns" description={SITE_DESCRIPTION}>
   <main>
     <div class="profile">
       <Image src={me} alt="A picture of me by a river and some boats." loading="eager" class="profile-image" />

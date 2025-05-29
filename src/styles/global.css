@@ -21,6 +21,8 @@
   --accent: #ff932f;
   --accent-secondary: #004491;
 
+  --border-color-primary: #ddd;
+
   --fs-subtle: 1rem;
   --fs-body: 1.125rem;
   --fs-emphasis: 1.25rem;
@@ -51,7 +53,7 @@ body {
 main {
   max-width: var(--app-width);
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto;
   background: var(--surface);
 }
 h1,

@@ -71,11 +71,14 @@ const { title, description, image = '/social.png' } = Astro.props;
   .app-layout {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 2rem;
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
     overflow-y: auto;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
     height: 100dvh;
   }
 </style>

@@ -1,6 +1,5 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Header from '../components/Header.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Layout from './Layout.astro';
 
@@ -8,7 +7,7 @@ type Props = {
   readTime: string;
 } & CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, readTime } = Astro.props;
+const { title, description, pubDate, updateDate, heroImage, readTime } = Astro.props;
 ---
 
 <Layout title={title} description={description}>
@@ -39,18 +38,21 @@ const { title, description, pubDate, updatedDate, heroImage, readTime } = Astro.
     .read-time {
       margin: 0;
     }
+    .article {
+      padding-bottom: 2rem;
+    }
   </style>
 
   <main>
-    <article>
+    <article class="article">
       <div class="title">
         <h1>{title}</h1>
         <div class="date">
           <FormattedDate date={pubDate} />
           {
-            updatedDate && (
+            updateDate && (
               <div class="last-updated-on">
-                Last updated on <FormattedDate date={updatedDate} />
+                Last updated on <FormattedDate date={updateDate} />
               </div>
             )
           }

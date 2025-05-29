@@ -10,9 +10,21 @@ export const blog = defineCollection({
     tags: z.string().array(),
     // Transform string to Date object
     pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
+    updateDate: z.coerce.date().optional(),
     heroImage: z.string().optional(),
   }),
 });
 
-export const collections = { blog };
+export const notes = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/content/notes' }),
+  // Type-check frontmatter using a schema
+  schema: z.object({
+    name: z.string(),
+    tags: z.string().array().optional(),
+    // Transform string to Date object
+    pubDate: z.coerce.date(),
+    updateDate: z.coerce.date(),
+  }),
+});
+
+export const collections = { blog, notes };
