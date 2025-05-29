@@ -5,6 +5,7 @@ import Layout from '@/layouts/Layout.astro';
 import NoteLink from '@/components/NoteLink.astro';
 
 const notes = await getCollection('notes');
+notes.sort((a, b) => (a.data.updateDate.toISOString() < b.data.updateDate.toISOString() ? 1 : -1));
 
 const { isNotePage = false } = Astro.props;
 ---
