@@ -67,17 +67,17 @@ const { title, description } = Astro.props;
 </html>
 
 <style>
-  .app-layout {
-    display: grid;
-    grid-template-columns: auto 1fr;
-  }
-
   .content {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
     box-sizing: border-box;
     padding: 1rem 2rem;
-    height: 100dvh;
+  }
+
+  @media (min-width: 1000px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
   }
 </style>
