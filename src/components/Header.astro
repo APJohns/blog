@@ -4,7 +4,7 @@ import HeaderLink from './HeaderLink.astro';
 import logo from '@/images/logo.png';
 ---
 
-<div>
+<div class="header-container">
   <button type="button" class="hamburger" id="hamburger">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={1.5} stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
@@ -117,6 +117,11 @@ import logo from '@/images/logo.png';
 </script>
 
 <style>
+  .header-container {
+    position: sticky;
+    top: 0;
+  }
+
   .nav-primary {
     position: sticky;
     top: 1rem;
@@ -137,7 +142,9 @@ import logo from '@/images/logo.png';
     border-radius: 0;
     width: 2rem;
     height: 2rem;
+    color: rgb(var(--gray-dark));
     background: transparent;
+    z-index: 100;
   }
 
   h2 {
