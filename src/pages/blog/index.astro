@@ -1,0 +1,29 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import { getCollection } from 'astro:content';
+import Layout from '@/layouts/Layout.astro';
+import BlogList from '@/components/BlogList.svelte';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <main>
+    <div class="hero">
+      <h1>Blog</h1>
+      <p class="subtitle">A collection of tips, tricks, and cool stuff I wanted to share.</p>
+    </div>
+
+    <BlogList posts={posts} client:load />
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    margin-top: 1rem;
+  }
+
+  .subtitle {
+    margin-top: 0;
+  }
+</style>
