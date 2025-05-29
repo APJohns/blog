@@ -31,11 +31,12 @@ const isActive = (href as string)?.replaceAll('/', '') === pathname.replaceAll('
     background: transparent;
 
     &:hover {
-      background: #eaeaea;
+      /* background: #eaeaea; */
+      background: var(--accent-secondary-light);
     }
 
     &.active {
-      background: var(--accent);
+      background: var(--accent-light);
     }
   }
 
