@@ -18,8 +18,10 @@
   --surface: #f4f4f4;
   --surface-inverse: black;
   --body-subtle: #6a6a6a;
-  --accent: #ff932f;
+  --accent: hsl(29, 100%, 59%);
+  --accent-light: hsl(29, 100%, 70%);
   --accent-secondary: #004491;
+  --accent-secondary-light: hsl(212, 50%, 85%);
 
   --border-color-primary: #ddd;
 
