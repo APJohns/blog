@@ -37,7 +37,9 @@ const { Content } = await render(note);
         Edit</a
       >
     </div>
-    <Content />
+    <div class="content">
+      <Content />
+    </div>
   </article>
 </Notes>
 
@@ -47,10 +49,10 @@ const { Content } = await render(note);
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 1rem;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem;
     padding: 0.5rem 1rem;
     font-size: var(--fs-subtle);
-    background: #eaeaea;
+    background: var(--background);
   }
 
   .edit-link {
@@ -62,5 +64,9 @@ const { Content } = await render(note);
       height: 1rem;
       width: auto;
     }
+  }
+
+  .content {
+    margin: 0 1rem;
   }
 </style>

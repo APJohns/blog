@@ -129,8 +129,8 @@ import logo from '@/images/logo.png';
     flex-direction: column;
     margin: 1rem;
     border-radius: 1rem;
-    background: #eaeaea;
-    border: 1px solid #ddd;
+    background: white;
+    border: 1px solid var(--border-color-primary);
   }
 
   .hamburger {
@@ -142,7 +142,7 @@ import logo from '@/images/logo.png';
     border-radius: 0;
     width: 2rem;
     height: 2rem;
-    color: rgb(var(--gray-dark));
+    color: var(--foreground);
     background: transparent;
     z-index: 100;
   }
@@ -161,7 +161,6 @@ import logo from '@/images/logo.png';
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    overflow: hidden;
     margin-right: 2rem;
     padding: 2rem;
   }
@@ -177,7 +176,7 @@ import logo from '@/images/logo.png';
   }
 
   nav a {
-    color: var(--black);
+    color: var(--foreground);
     text-decoration: none;
   }
 
