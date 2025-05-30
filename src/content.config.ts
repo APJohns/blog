@@ -25,6 +25,7 @@ export const notes = defineCollection({
     // Transform string to Date object
     pubDate: z.coerce.date(),
     updateDate: z.coerce.date(),
+    contributors: z.string().array(),
   }),
 });
 

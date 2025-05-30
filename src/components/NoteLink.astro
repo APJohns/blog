@@ -14,7 +14,6 @@ const isActive = (href as string)?.replaceAll('/', '') === pathname.replaceAll('
 
 <a href={href} class:list={[className, { active: isActive, noteLink: true }]} {...props}>
   <div class="note-name">{name}</div>
-  <div>{date}</div>
 </a>
 
 <style>

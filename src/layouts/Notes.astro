@@ -3,6 +3,7 @@ import { SITE_DESCRIPTION } from '@/consts';
 import { getCollection } from 'astro:content';
 import Layout from '@/layouts/Layout.astro';
 import NoteLink from '@/components/NoteLink.astro';
+import { formatDate } from '@/utils';
 
 const notes = await getCollection('notes');
 notes.sort((a, b) => (a.data.updateDate.toISOString() < b.data.updateDate.toISOString() ? 1 : -1));
@@ -19,11 +20,7 @@ const { isNotePage = false } = Astro.props;
           {
             notes.map((note) => (
               <li class="note-item">
-                <NoteLink
-                  href={`/notes/${note.id}`}
-                  name={note.data.name}
-                  date={note.data.updateDate.toLocaleDateString()}
-                />
+                <NoteLink href={`/notes/${note.id}`} name={note.data.name} date={formatDate(note.data.updateDate)} />
               </li>
             ))
           }
@@ -69,8 +66,8 @@ const { isNotePage = false } = Astro.props;
 
   .isNotePage .note-panel {
     border-radius: 1rem;
-    padding: 1rem;
-    background: white;
+    /* padding: 1rem; */
+    /* background: white; */
   }
 
   main:not(.isNotePage) {
