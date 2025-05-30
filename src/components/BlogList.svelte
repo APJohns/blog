@@ -84,7 +84,7 @@
   }
 
   .tag-checkbox:checked + .tag {
-    color: var(--surface);
+    color: var(--background);
     background: var(--accent);
   }
 
@@ -119,14 +119,15 @@
     flex-direction: column;
     align-items: start;
     gap: 1rem;
-    border: 1px solid #ddd;
+    border-radius: 1rem;
     padding: 1.5rem;
-    color: black;
+    color: var(--foreground);
     text-decoration: none;
+    background: white;
   }
 
   .post-link:hover {
-    background: #eee;
+    background: var(--accent-secondary-light);
   }
 
   .title {

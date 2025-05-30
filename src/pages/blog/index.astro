@@ -17,13 +17,3 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
     <BlogList posts={posts} client:load />
   </main>
 </Layout>
-
-<style>
-  .hero {
-    margin-top: 1rem;
-  }
-
-  .subtitle {
-    margin-top: 0;
-  }
-</style>

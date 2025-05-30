@@ -7,55 +7,75 @@ import me from '@/images/me.png';
 
 <Layout title="About me | Ash Johns" description={SITE_DESCRIPTION}>
   <main>
-    <div class="profile">
-      <Image src={me} alt="A picture of me by a river and some boats." loading="eager" class="profile-image" />
-      <div class="profile-text">
-        <h1>Hi! I'm Ash</h1>
-      </div>
+    <div class="hero">
+      <h1>About me</h1>
     </div>
     <p>
       I'm a UX Frontend Developer based in Massachusetts. I started this blog to create a space to share details about
       cool projects I've been working on, and any tips and tricks I learn along the way.
     </p>
     <p>Check out my <a href="https://ashpjohns.com">portfolio</a> for more info on my professional background.</p>
+    <p>Get in touch: <a href="mailto:mail@ashpjohns.com">mail@ashpjohns.com</a></p>
+
+    <div class="profile-card">
+      <Image
+        src={me}
+        alt="A picture of me by a river in Richmond England with some row boats docked along the bank."
+        loading="eager"
+        class="profile-image"
+      />
+      <div class="profile-details">
+        <div class="name">Ash Johns</div>
+        <div class="location">Boston, MA</div>
+        <div class="status">Open to work</div>
+      </div>
+    </div>
   </main>
 </Layout>
 
 <style>
-  .profile {
-    display: flex;
+  .profile-card {
+    display: inline-flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1rem;
-    margin: 1rem 0 2rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 2rem;
+    align-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.2;
+    background: white;
+  }
+
+  .profile-details {
+    .name {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--fs-lg);
+    }
+
+    .location {
+      font-size: var(--fs-subtle);
+    }
+
+    .status {
+      margin-top: 1rem;
+    }
   }
 
   .profile-image {
-    width: 100%;
+    display: block;
+    width: 10rem;
+    height: auto;
   }
 
-  .profile-text {
-    flex: 1;
-  }
-
-  .profile h1 {
-    margin-bottom: 0;
-  }
-
-  .profile p {
-    margin-top: 0;
-  }
-
-  @media (min-width: 400px) {
-    .profile {
-      align-items: center;
+  @media (min-width: 800px) {
+    .profile-card {
+      flex-direction: row;
+      text-align: left;
     }
 
-    .profile-image {
-      width: 33%;
-      min-width: 200px;
+    .profile-details {
+      min-width: 15ch;
     }
   }
 </style>
