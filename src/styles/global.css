@@ -96,32 +96,22 @@ a:hover {
 p {
   margin-bottom: 1em;
 }
-.prose p {
-  margin-bottom: 2em;
-}
-textarea {
-  width: 100%;
-  font-size: 16px;
-}
-input {
-  font-size: 16px;
-}
 table {
   width: 100%;
 }
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 0;
 }
 code {
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
-  border-radius: 2px;
+  border-radius: 0.5rem;
 }
 pre {
   margin: 3.5rem 0;
-  border-radius: 8px;
+  border-radius: 1rem;
   padding: 1.5em;
   font-size: 1rem;
 }
