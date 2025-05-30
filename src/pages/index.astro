@@ -1,6 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '@/layouts/Layout.astro';
+import FormattedDate from '@/components/FormattedDate.astro';
+
+const featuredPosts = (await getCollection('blog'))
+  .filter((blog) => blog.data.featured)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -15,6 +21,22 @@ import Layout from '@/layouts/Layout.astro';
       or to branch out into more feature development. Don't hesitate to reach out if you think I'd be a great addition
       to your team!
     </p>
+
+    <h2>Featured posts</h2>
+    <ul>
+      {
+        featuredPosts.map((post) => (
+          <li>
+            <div class="featured-post">
+              <a href={`/blog/${post.id}`}>{post.data.title}</a>
+              <div class="post-date">
+                <FormattedDate date={post.data.pubDate} />
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
   </main>
 </Layout>
 
@@ -25,5 +47,26 @@ import Layout from '@/layouts/Layout.astro';
 
   .subtitle {
     margin-top: 0;
+  }
+
+  .featured-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1rem;
+  }
+
+  .post-date {
+    font-size: var(--fs-subtle);
+    font-weight: var(--font-weight-light);
+    color: var(--foreground-subtle);
+  }
+
+  @media (min-width: 800px) {
+    .featured-post {
+      flex-direction: row;
+      margin-top: 0.5rem;
+    }
   }
 </style>

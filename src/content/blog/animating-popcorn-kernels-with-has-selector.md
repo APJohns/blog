@@ -3,6 +3,7 @@ title: 'Animating popcorn kernels with the :has() selector'
 description: 'Selecting previous siblings on hover using the :has() selector.'
 pubDate: 'Apr 2 2025 EST'
 tags: ['Frontend', 'Mini tips']
+featured: true
 ---
 
 ![Screenshot of a 5-star rating component where the stars are popcorn kernels](@/images/popcorn1.png)

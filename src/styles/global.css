@@ -8,6 +8,7 @@
 
   --app-width: 90%;
   --foreground: rgb(34, 41, 57);
+  --foreground-subtle: hsl(222, 5%, 45%);
   --background: #f4f4f4;
   --background-inverse: var(--foreground);
   --body-subtle: #6a6a6a;
@@ -22,6 +23,7 @@
   --fs-body: 1.125rem;
   --fs-emphasis: 1.25rem;
 
+  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
