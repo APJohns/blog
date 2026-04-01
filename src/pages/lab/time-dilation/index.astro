@@ -1,0 +1,14 @@
+---
+import { SITE_DESCRIPTION } from '@/consts';
+import Layout from '@/layouts/Layout.astro';
+import TimeDilation from './TimeDilation';
+---
+
+<Layout title="Time Dilation | Ash Johns" description={SITE_DESCRIPTION}>
+  <main>
+    <div class="hero">
+      <h1>Time dilation</h1>
+      <TimeDilation client:load />
+    </div>
+  </main>
+</Layout>
