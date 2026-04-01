@@ -76,7 +76,7 @@ export default function TimeDilation() {
   return (
     <div className={!areHandsSmooth ? 'step-hands' : ''}>
       <p>You're on a rocket flying away from Earth. 🌍 🚀</p>
-      <p>Let's look at how your velocity compared to Earth affects your perception of time.</p>
+      <p>Let's look at how your velocity relative to Earth affects how you experience time.</p>
       <div className="controls">
         <label htmlFor="velocity">Velocity</label>
         <div className="velocity-slider">
