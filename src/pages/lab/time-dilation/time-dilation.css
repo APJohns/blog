@@ -46,6 +46,7 @@ h2 {
   width: 80%;
   aspect-ratio: 1/1;
   margin: auto;
+  z-index: -1;
 }
 
 @media (min-width: 400px) {
